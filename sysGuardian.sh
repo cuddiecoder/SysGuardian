@@ -25,7 +25,8 @@ while true; do
     echo "3) Check Disk space"
     echo "4) Show Network info"
     echo "5) Check Firewall status"
-    echo "6) Exit"
+    echo "6) Check System Updates"
+    echo "7) Exit"
     echo
 
     read -p "Choose an option: " choice
@@ -53,11 +54,15 @@ while true; do
             read -p "Press enter to return to menu..."
             ;;
         6)
+            bash modules/update_check.sh
+            read -p "Press enter to return to menu..."
+            ;;
+        7)
             echo "Exiting SysGuardian..."
             exit 0
             ;;
         *)
-            echo "Invalid option. Please try again."
+            echo "Invalid option"
             sleep 1
             ;;
     esac

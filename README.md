@@ -1,7 +1,7 @@
 # SysGuardian
 
 SysGuardian is a modular, command-line based system auditing toolkit written in Bash.  
-It provides essential system monitoring functions such as CPU usage, memory status, disk usage, and network information.  
+It provides essential system monitoring functions such as CPU usage, memory status, disk usage, network information, and firewall status.  
 The project is structured to allow gradual expansion as additional modules or features are developed.
 
 This repository is intended for learning, portfolio building, and practical system administration practice.
@@ -32,6 +32,7 @@ SysGuardian currently supports the following system checks:
 2. Memory usage  
 3. Disk space summary  
 4. Network interface and IP information  
+5. Firewall status check  
 
 Each feature is contained within a module located in the `modules/` directory.
 
@@ -45,7 +46,8 @@ SysGuardian/
 │ ├── cpu.sh CPU usage check
 │ ├── memory.sh Memory status check
 │ ├── disk.sh Disk usage summary
-│ └── network.sh Network and IP information
+│ ├── network.sh Network and IP information
+│ └── firewall.sh Firewall status check
 ├── logs/
 │ └── sysguardian.log Log file (auto-created)
 ├── .gitignore

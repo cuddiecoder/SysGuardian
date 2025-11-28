@@ -26,7 +26,9 @@ while true; do
     echo "4) Show Network info"
     echo "5) Check Firewall status"
     echo "6) Check System Updates"
-    echo "7) Exit"
+    echo "7) Check Service Status"
+
+    echo "8) Exit"
     echo
 
     read -p "Choose an option: " choice
@@ -58,6 +60,11 @@ while true; do
             read -p "Press enter to return to menu..."
             ;;
         7)
+            bash modules/service_status.sh
+            read -p "Press enter to return to menu..."
+            ;;
+
+        8)
             echo "Exiting SysGuardian..."
             exit 0
             ;;
